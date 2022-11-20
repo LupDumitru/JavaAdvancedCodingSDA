@@ -13,33 +13,33 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        Map<String,Integer> stringIntegerMap=new HashMap<>();
-        stringIntegerMap.put("Java",18);
-        stringIntegerMap.put("Python",1);
-        stringIntegerMap.put("PHP",0);
+        Map<String, Integer> stringIntegerMap = new HashMap<>();
+        stringIntegerMap.put("Java", 18);
+        stringIntegerMap.put("Python", 1);
+        stringIntegerMap.put("PHP", 0);
 //printMapContent(stringIntegerMap);
-printMapContentV2(stringIntegerMap);
+        printMapContentV2(stringIntegerMap);
     }
 
     public static void printMapContent(Map<String, Integer> inputMapContent) {
-        Set<Map.Entry<String, Integer>>entries= inputMapContent.entrySet();
-        for(Map.Entry<String,Integer>el:entries){
-            System.out.println("Key "+el.getKey()+ " , Value : "+ el.getValue());
+        Set<Map.Entry<String, Integer>> entries = inputMapContent.entrySet();
+        for (Map.Entry<String, Integer> el : entries) {
+            System.out.println("Key " + el.getKey() + " , Value : " + el.getValue());
         }
     }
 
     public static void printMapContentV2(Map<String, Integer> inputMapContent) {
-        Set<Map.Entry<String, Integer>>entries= inputMapContent.entrySet();
-        List<Map.Entry<String, Integer>> entriesAsList=new ArrayList<>(entries);
-     for(int i =0 ; i<entriesAsList.size();i++){
-         String endOfLine;
-         if(i<entriesAsList.size()-1){
+        Set<Map.Entry<String, Integer>> entries = inputMapContent.entrySet();
+        List<Map.Entry<String, Integer>> entriesAsList = new ArrayList<>(entries);
+        for (int i = 0; i < entriesAsList.size(); i++) {
+            String endOfLine;
+            if (i < entriesAsList.size() - 1) {
 
-      endOfLine=",";
-         }else {
-             endOfLine=".";
-         }
-         System.out.println("Key "+entriesAsList.get(i).getKey()+ " , Value : "+ entriesAsList.get(i).getValue() + endOfLine);
-     }
+                endOfLine = ",";
+            } else {
+                endOfLine = ".";
+            }
+            System.out.println("Key " + entriesAsList.get(i).getKey() + " , Value : " + entriesAsList.get(i).getValue() + endOfLine);
+        }
     }
 }
